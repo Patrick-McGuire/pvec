@@ -3,4 +3,4 @@ project(pvec C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(pvec main.c)
+add_executable(pvec main.c pvec.c pvec.h)
