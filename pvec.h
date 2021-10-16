@@ -1,17 +1,12 @@
-//
-// Created by patri on 10/15/2021.
-//
+#include <stdio.h>
+#include <stdlib.h>
 
 #ifndef C_VECTOR_TESTS_PVEC_H
 #define C_VECTOR_TESTS_PVEC_H
 
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * Prints out a pvec
- * @param pvec pvec to print
- * @return
+ * @param[in] pvec pvec to print
  */
 void pvec_print(uint64_t *pvec);
 
@@ -30,30 +25,30 @@ void pvec_append(uint64_t *pvec, uint64_t val);
 
 /**
  * Removes the last element from the pvec
- * @param pvec pvec to remove last element from
+ * @param[in, out] pvec pvec to remove last element from
  * @return the element removed
  */
 uint64_t pvec_pop(uint64_t *pvec);
 
 /**
  * Inserts a value into a pvec at a specified index
- * @param pvec pvec to insert into
- * @param index index to insert into
- * @param val value to insert
+ * @param[in, out] pvec pvec to insert into
+ * @param[in] index index to insert into
+ * @param[in] val value to insert
  */
 void pvec_insert(uint64_t *pvec, uint64_t index, uint64_t val);
 
 /**
  * Removes a value from a pvec at a specified index
- * @param pvec pvec to remove from
- * @param index index to remove from
+ * @param[in, out] pvec pvec to remove from
+ * @param[in] index index to remove from
  * @return value removed
  */
 uint64_t pvec_remove(uint64_t *pvec, uint64_t index);
 
 /**
  * Gets a value from the specified pvec
- * @param[in,out] pvec pvec to get value from
+ * @param[in] pvec pvec to get value from
  * @param[in] index index to retrieve
  * @return value from pvec
  */
@@ -61,15 +56,15 @@ uint64_t pvec_getValue(uint64_t *pvec, uint64_t index);
 
 /**
  * Sets a value in the specified pvec
- * @param pvec pvec to set value to
- * @param index index to set
- * @param val value to set
+ * @param[in, out] pvec pvec to set value to
+ * @param[in] index index to set
+ * @param[in] val value to set
  */
 void pvec_setValue(uint64_t *pvec, uint64_t index, uint64_t val);
 
 /**
  * Gets the length of a specified pvec
- * @param pvec pvec to get length from
+ * @param[in] pvec pvec to get length from
  * @return length of specified pvec
  */
 uint64_t pvec_getLength(uint64_t *pvec);

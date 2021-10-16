@@ -4,8 +4,8 @@
 
 void pvec_demo() {
     // Initialize the pvec
-    uint64_t  *longPvec = pvec_newPvec();
-    uint64_t  *pvec2 = pvec_newPvec();
+    uint64_t *longPvec = pvec_newPvec();
+    uint64_t *pvec2 = pvec_newPvec();
 
     // Create the long pvec with values and print it
     for(int i = 0; i < 500; i++) {
