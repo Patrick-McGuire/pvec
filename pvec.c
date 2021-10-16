@@ -1,7 +1,3 @@
-//
-// Created by patri on 10/15/2021.
-//
-
 #include "pvec.h"
 /* Format for pvec:
  *  First memory block:
