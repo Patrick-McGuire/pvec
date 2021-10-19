@@ -63,6 +63,15 @@ uint64_t pvec_getValue(uint64_t *pvec, uint64_t index);
 void pvec_setValue(uint64_t *pvec, uint64_t index, uint64_t val);
 
 /**
+ * Transfers a element from 1 pvec to another
+ * @param pvec1[in, out] vector to transfer element out of
+ * @param index1[in] index for first vector
+ * @param pvec2[in, out] vector to transfer element to
+ * @param index2[in] index for second vector
+ */
+void pvec_transferElement(uint64_t *pvec1, uint64_t index1, uint64_t *pvec2, uint64_t index2);
+
+/**
  * Gets the length of a specified pvec
  * @param[in] pvec pvec to get length from
  * @return length of specified pvec

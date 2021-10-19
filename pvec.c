@@ -115,6 +115,28 @@ void pvec_delete(uint64_t *pvec) {
     free(pvec);                                                       // Free the initial block
 }
 
+void pvec_transferElement(uint64_t *pvec1, uint64_t index1, uint64_t *pvec2, uint64_t index2) {
+    if(index1 > pvec_getLength(pvec1) - 1) {
+        index1 = pvec_getLength(pvec1) - 1;
+    }
+    if(index2 > pvec_getLength(pvec2)) {
+        index2 = pvec_getLength(pvec2);
+    }
+    // Get pointers to all involved memory locations
+    uint64_t *elePrev1 = pvec_getPointerToElement(pvec1, index1);
+    uint64_t *eleToTransfer = (uint64_t*) elePrev1[0];
+    uint64_t  *eleNext1 = (uint64_t*) eleToTransfer[0];
+    uint64_t *elePrev2 = pvec_getPointerToElement(pvec2, index2);
+    uint64_t *eleNext2 = (uint64_t*) elePrev2[0];
+    // Update saved pointers
+    elePrev1[0] = (uint64_t) eleNext1;                                          // Remove eleToTransfer from the first list
+    elePrev2[0] = (uint64_t) eleToTransfer;                                     // Added eleToTransfer to the second list
+    eleToTransfer[0] = (uint64_t) eleNext2;                                     // Add on the end of the second list
+    // Adjust the lengths
+    pvec1[1]--;
+    pvec2[1]++;
+}
+
 
 
 

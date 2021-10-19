@@ -30,6 +30,12 @@ void pvec_demo() {
     pvec_setValue(pvec2, 4, 99);
     printf("2: ");
     pvec_print(pvec2);
+    // Transfer
+    pvec_transferElement(longPvec, 600, pvec2, 19);
+    printf("1: ");
+    pvec_print(longPvec);
+    printf("2: ");
+    pvec_print(pvec2);
     // Print the length
     printf("1: %lu\n", pvec_getLength(longPvec));
     printf("2: %lu\n", pvec_getLength(pvec2));
@@ -41,6 +47,7 @@ void pvec_demo() {
 int main() {
     pvec_demo();
 //    main();
+
     return 0;
 }
 
