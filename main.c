@@ -31,7 +31,7 @@ void pvec_demo() {
     printf("2: ");
     pvec_print(pvec2);
     // Transfer
-    pvec_transferElement(longPvec, 600, pvec2, 19);
+    pvec_transferElement(longPvec, 600, pvec2, 1);
     printf("1: ");
     pvec_print(longPvec);
     printf("2: ");
@@ -43,11 +43,16 @@ void pvec_demo() {
     pvec_delete(pvec2);
 }
 
-
+void cppIsBetterThanPython() {
+    int a = 12;
+    printf("%d : %lu\n", a, (uint64_t) &a);
+    a += 15;
+    printf("%d : %lu\n", a, (uint64_t) &a);
+}
 int main() {
-    pvec_demo();
-//    main();
-
+    while (1 == 1) {
+        pvec_demo();
+    }
     return 0;
 }
 

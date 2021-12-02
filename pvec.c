@@ -18,7 +18,7 @@ void pvec_print(uint64_t *pvec) {
         digits += temp == 0 ? 1 : temp;
     }
     uint32_t strSize = digits + (len * 2) + 4;                  // Calculate the buffer size needed
-    char buf[strSize];
+    char *buf = malloc(strSize);
     buf[0] = '{';
     buf[1] = ' ';
     char *ptr = &buf[2];                                        // Get all values from the pvec and add them to the buffer
@@ -30,6 +30,7 @@ void pvec_print(uint64_t *pvec) {
     }
     sprintf(ptr, "%lu }\n", pvec_getValue(pvec, len-1));
     printf("%s", buf);                                          // Print the result
+    free(buf);
 }
 
 uint64_t pvec_getLength(uint64_t *pvec) {

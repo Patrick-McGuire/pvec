@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "string.h"
 
 #ifndef C_VECTOR_TESTS_PVEC_H
 #define C_VECTOR_TESTS_PVEC_H
