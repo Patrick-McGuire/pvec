@@ -49,10 +49,21 @@ void cppIsBetterThanPython() {
     a += 15;
     printf("%d : %lu\n", a, (uint64_t) &a);
 }
+
+int randomInt(int max) {
+    return rand() % max + 1;
+}
+
+
 int main() {
-    while (1 == 1) {
+    double a = 75 / 100;
+    printf("%f", a);
+//    for(int i = 0; i < 100; i++) {
+//        printf("%d\n", randomInt(10));
+//    }
+//    while (1 == 1) {
         pvec_demo();
-    }
+//    }
     return 0;
 }
 
